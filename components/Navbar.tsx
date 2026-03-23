@@ -95,31 +95,32 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Mobile Menu */}
-        {mobileOpen && (
-          <div className="md:hidden pb-6 pt-2 border-t border-white/5">
-            <div className="flex flex-col gap-4">
-              {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setMobileOpen(false)}
-                  className="text-sm font-medium text-surface-100/70 hover:text-white transition-colors"
-                >
-                  {link.label}
-                </a>
-              ))}
-              <a
-                href="#contact"
-                onClick={() => setMobileOpen(false)}
-                className="inline-flex items-center justify-center rounded-lg bg-primary-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-primary-500 transition-all"
-              >
-                Get Started
-              </a>
-            </div>
-          </div>
-        )}
       </div>
+
+      {/* Mobile Menu - Overlay */}
+      {mobileOpen && (
+        <div className="md:hidden absolute top-full left-0 right-0 bg-surface-950/95 backdrop-blur-xl border-b border-white/5 shadow-lg shadow-black/30">
+          <div className="flex flex-col gap-4 px-6 py-6">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={() => setMobileOpen(false)}
+                className="text-sm font-medium text-surface-100/70 hover:text-white transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
+            <a
+              href="#contact"
+              onClick={() => setMobileOpen(false)}
+              className="inline-flex items-center justify-center rounded-lg bg-primary-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-primary-500 transition-all"
+            >
+              Get Started
+            </a>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }
