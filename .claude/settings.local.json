@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sips -s format png \"/Users/muratgenc/Desktop/visionbridge/VB infinity.tiff\" --out /Users/muratgenc/Desktop/visionbridge/public/visionbridge-logo.png)",
+      "Bash(npm install:*)",
+      "Read(//usr/local/bin/**)",
+      "Read(//opt/homebrew/bin/**)",
+      "Bash(mdfind -name node)",
+      "Bash(grep -E 'bin/node$')",
+      "Bash(sw_vers)",
+      "Bash(git --version)"
+    ]
+  }
+}
