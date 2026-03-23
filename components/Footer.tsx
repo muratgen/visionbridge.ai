@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="max-w-sm">
             <div className="flex items-center gap-3 mb-4">
               <Image
-                src="/visionbridge-logo.png"
+                src="/visionbridge.ai/visionbridge-logo.png"
                 alt="VisionBridge.ai"
                 width={36}
                 height={36}
